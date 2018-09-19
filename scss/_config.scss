@@ -5,11 +5,14 @@ $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
 
-// Functions
+// Function
+// transition mode for fadeouts
 @mixin easeOut {
     transition: all 1.5s ease-out;
 }
 
+// Function
+// Assings an image as background and mixes it with a grey overlay
 @mixin background {
     @if $show-home-image {
         &#bg-img {

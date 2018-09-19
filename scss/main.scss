@@ -1,8 +1,9 @@
-// Main SCSS File
 // import _config.scss
 @import 'config';
+@import 'menu';
 
-// ALL
+// Main SCSS File
+
 * {
   box-sizing: border-box;
 }
