@@ -82,10 +82,20 @@
         }
     }
 
+    // Items within the menu nav
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
+        // When menu gets displayed
+        &.show {
+            // Slide the items in from the right
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
     // Left Branding part
     &-branding {
-        // margin: 0;
-        // padding: 0;
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
         @include easeOut;
@@ -95,5 +105,20 @@
             // Slide down from the bottom
             transform: translate3d(0, 0, 0);
         }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url('../img/portrait.jpg');
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+    }
+}
+
+// Delay each nav-item slide by 0.1s
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
     }
 }
