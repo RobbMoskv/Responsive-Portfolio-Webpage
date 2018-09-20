@@ -17,7 +17,7 @@ menuBtn.addEventListener('click', toggleMenu);
 
 // Functions
 function toggleMenu() {
-    // Menu is closed, then
+    // Menu is closed
     if (!showMenu) {
         menuBtn.classList.add('close');
         menu.classList.add('show');
