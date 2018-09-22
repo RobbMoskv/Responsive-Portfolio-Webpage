@@ -47,7 +47,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
     visibility: hidden;
 
     &.show {
@@ -56,6 +55,7 @@
 
     &-branding,
     &-nav {
+        background: rgba($primary-color, 0.9);
         display: flex;
         flex-flow: column wrap;
         align-items: center; // left/right
@@ -70,7 +70,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: rgba(darken($primary-color, 5), 0.9);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include easeOut;
@@ -92,11 +92,16 @@
             // Slide the items in from the right
             transform: translate3d(0, 0, 0);
         }
+
+        // Link (a) inside current class
+        &.current>a {
+            color: $secondary-color;
+        }
     }
 
     // Left Branding part
     &-branding {
-        background: $primary-color;
+        background: rgba($primary-color, 0.9);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
 
@@ -109,14 +114,31 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('../img/portrait.jpg');
+            background: url('/dist/img/portrait.jpg');
             border-radius: 50%;
             border: solid 3px $secondary-color;
         }
     }
+
+    // Style Nav-links
+    .nav-link {
+        display: inline;
+        position: relative;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
 }
 
-// Delay each nav-item slide by 0.1s
+// Delay each nav-item slide in for 0.1s
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;
