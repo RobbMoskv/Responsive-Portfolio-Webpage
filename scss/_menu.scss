@@ -13,7 +13,8 @@
         width: 28px;
         height: 3px;
         margin-bottom: 5px;
-        background: #fff;
+        // Text color is calculated based on the background color
+        background: setTextColor($primary-color);
         @include easeOut;
     }
 
@@ -128,7 +129,8 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: #fff;
+        // Text color is calculated based on the background color
+        color: setTextColor($primary-color);
         text-decoration: none;
         @include easeOut;
 
