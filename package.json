@@ -12,6 +12,7 @@
   "author": "Robb Moskv",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^2.0.0"
+    "gh-pages": "^2.0.0",
+    "node-sass": "^4.9.2"
   }
 }
