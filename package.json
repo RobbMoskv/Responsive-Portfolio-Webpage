@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "Responsive Portfolio Website",
   "main": "index.js",
+  "homepage": "https://RobbMoskv.github.io/Responsive-Portfolio-Webpage",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Robb Moskv",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.0.0"
+  }
 }
